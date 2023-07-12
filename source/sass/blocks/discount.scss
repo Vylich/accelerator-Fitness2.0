@@ -1,0 +1,160 @@
+.discount {
+  padding-bottom: 30px;
+
+  h2 {
+    font-family: $ff-alumni;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 36px;
+    font-size: 54px;
+    line-height: 65px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+.discount__wrapper {
+  display: flex;
+  gap: 20px 40px;
+  justify-content: center;
+}
+
+.discount__promo {
+  align-self: center;
+}
+
+.discount__promo-inner {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
+.discount__promo-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 280px;
+  min-height: 462px;
+  padding: 35px 45px 45px;
+  color: $color-default-white;
+  background-color: $color-red;
+  font-weight: 700;
+
+  span {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  a {
+    position: relative;
+    font-size: 14px;
+    margin: auto auto 0 0;
+    text-transform: uppercase;
+    color: $color-default-white;
+    letter-spacing: 0.05em;
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $color-default-white;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: 1px;
+      right: 0;
+    }
+  }
+}
+
+.discount__promo-year {
+  margin: 0;
+  font-size: 28px;
+}
+
+.discount__info {
+  flex-grow: 1;
+}
+
+.discount__info-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px 0;
+}
+
+.discount__promo-cost {
+  margin: 0;
+  font-size: 70px;
+  line-height: 156%;
+}
+
+.discount__info-container {
+  color: $color-resolution-blue;
+  display: flex;
+  flex-direction: column;
+  min-height: 211px;
+  max-width: 560px;
+  width: 100%;
+  border: 7px solid;
+  border-image: $border-gradient;
+  padding: 19px 28px 27px;
+
+  p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom: 20px;
+  }
+
+  a {
+    position: relative;
+    color: $color-resolution-blue;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: auto auto 0 0;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    line-height: 14px;
+    outline-color: $color-sapphire;
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $color-resolution-blue;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: -1px;
+      right: 0;
+    }
+  }
+}
+
+.discount__picture {
+  margin: 0;
+  background-color: $color-sapphire;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
