@@ -9,57 +9,60 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="header__wrapper container">
-          <p class="header__logo logo">
-            <a aria-hidden="true">
+      <div class="general">
+        <header class="header">
+          <div class="header__wrapper container">
+            <a class="header__logo logo" aria-hidden="true">
               <span class="visually-hidden">На главную</span>
               <svg width="122" height="44" focusable="false" aria-hidden="true">
                 <use xlink:href="img/icons/sprite.svg#logo"></use>
               </svg>
             </a>
-          </p>
-          <nav class="header__nav">
-            <a href="tel:88005555555">8-800-555-55-55</a>
-          </nav>
-        </div>
-      </header>
-      <section class="intro">
-        <div class="intro__wrapper container">
-          <div class="intro__about">
-            <p>омск</p>
-            <div class="intro__about-inner">
-              <ul>
-                <li>Тренажёрный зал</li>
-                <li>Групповые занятия</li>
-                <li>Кардио-зона</li>
-              </ul>
-              <h1>Фитнес<br />центр</h1>
-            </div>
-            <a class="intro__about-button btn" href="#tickets"
-              >Купить абонемент</a
-            >
+            <nav class="header__nav">
+              <a href="tel:88005555555">8-800-555-55-55</a>
+            </nav>
           </div>
-          <p class="intro__about-picture">
-            <picture>
-              <source
-                type="image/webp"
-                srcset="img/content/intro.webp 1x, img/content/intro@2x.webp 2x"
-                width="500"
-                height="556"
-              />
-              <img
-                src="img/content/intro.jpg"
-                srcset="img/content/intro@2x.jpg 2x"
-                width="500"
-                height="556"
-                loading="lazy"
-                alt="Портрет мужчины"
-              />
-            </picture>
-          </p>
-        </div>
-      </section>
+        </header>
+        <section class="intro">
+          <div class="intro__wrapper container">
+            <div class="intro__about">
+              <p>омск</p>
+              <div class="intro__about-inner">
+                <ul>
+                  <li>Тренажёрный зал</li>
+                  <li>Групповые занятия</li>
+                  <li>Кардио-зона</li>
+                </ul>
+                <h1>Фитнес<br />центр</h1>
+              </div>
+              <a class="intro__about-button btn" href="#tickets"
+                >Купить абонемент</a
+              >
+            </div>
+            <p class="intro__about-picture">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    img/content/intro.webp    1x,
+                    img/content/intro@2x.webp 2x
+                  "
+                  width="500"
+                  height="556"
+                />
+                <img
+                  src="img/content/intro.jpg"
+                  srcset="img/content/intro@2x.jpg 2x"
+                  width="500"
+                  height="556"
+                  loading="lazy"
+                  alt="Портрет мужчины"
+                />
+              </picture>
+            </p>
+          </div>
+        </section>
+      </div>
       <main>
         <section class="gym">
           <div class="gym__wrapper container">
@@ -239,17 +242,23 @@
                 <div class="games__time-content">
                   <div class="games__time-inner">
                     <p>Дата</p>
-                    <time
-                      class="games__time games__time--line"
-                      datetime="2019-03-07"
-                    >
-                      7
+                    <div class="games__content-wrapper">
+                      <time
+                        class="games__time games__time--line"
+                        datetime="2019-03-07"
+                      >
+                        7
+                      </time>
                       <span>Марта 2019</span>
-                    </time>
+                    </div>
+                  </div>
+                  <div class="games__time-inner">
                     <p>Время</p>
-                    <time class="games__time" datetime="2019-03-07 12:00">
-                      12:00
-                    </time>
+                    <div class="games__content-wrapper">
+                      <time class="games__time" datetime="2019-03-07 12:00">
+                        12:00
+                      </time>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -977,14 +986,12 @@
       </main>
       <footer class="footer">
         <div class="footer__wrapper container">
-          <p class="footer__logo logo">
-            <a href="#" aria-hidden="true">
-              <span class="visually-hidden">На главную</span>
-              <svg width="88" height="32" focusable="false" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#logo"></use>
-              </svg>
-            </a>
-          </p>
+          <a class="footer__logo logo" href="#" aria-hidden="true">
+            <span class="visually-hidden">На главную</span>
+            <svg width="88" height="32" focusable="false" aria-hidden="true">
+              <use xlink:href="img/icons/sprite.svg#logo"></use>
+            </svg>
+          </a>
           <nav class="footer__links">
             <ul class="footer__links-list">
               <li><a href="#">Услуги</a></li>
@@ -994,47 +1001,50 @@
               <li><a href="#">Расписание</a></li>
             </ul>
           </nav>
-          <div class="footer__icons">
-            <p>
-              <a href="#" aria-hidden="true">
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#" aria-hidden="true">
                 <svg
-                  width="25"
-                  height="25"
+                  width="12"
+                  height="7"
                   focusable="false"
                   aria-hidden="true"
                   aria-label="вконтакте"
+                  class="social__icon social__icon--vk"
                 >
                   <use xlink:href="img/icons/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
-            </p>
-            <p>
-              <a href="#" aria-hidden="true">
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-hidden="true">
                 <svg
-                  width="25"
-                  height="25"
+                  width="9"
+                  height="16"
                   focusable="false"
                   aria-hidden="true"
                   aria-label="одноклассники"
+                  class="social__icon social__icon--ok"
                 >
                   <use xlink:href="img/icons/sprite.svg#icon-ok"></use>
                 </svg>
               </a>
-            </p>
-            <p>
-              <a href="#" aria-hidden="true">
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-hidden="true">
                 <svg
-                  width="25"
-                  height="25"
+                  width="14"
+                  height="14"
                   focusable="false"
                   aria-hidden="true"
                   aria-label="реддит"
+                  class="social__icon social__icon--rt"
                 >
                   <use xlink:href="img/icons/sprite.svg#icon-reddit"></use>
                 </svg>
               </a>
-            </p>
-          </div>
+            </li>
+          </ul>
         </div>
       </footer>
     </div>

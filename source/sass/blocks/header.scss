@@ -1,0 +1,33 @@
+.header__wrapper {
+  display: flex;
+  gap: 10px 30px;
+  justify-content: space-between;
+  padding-top: 30px;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 30px;
+}
+
+.header__nav {
+  align-self: flex-start;
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: $ff-alumni;
+
+  a {
+    color: $color-default-white;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+    letter-spacing: 0.7px;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+}

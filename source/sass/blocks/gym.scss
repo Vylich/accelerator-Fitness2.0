@@ -1,0 +1,57 @@
+.gym {
+  min-height: 636px;
+}
+
+.gym__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 355px 1fr;
+  column-gap: 85px;
+  padding-left: 104px;
+  padding-right: 44px;
+  padding-bottom: 50px;
+  max-width: 1250px;
+}
+
+.gym__content {
+  margin-top: 38px;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+    font-family: $ff-alumni;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+.gym__text {
+  margin-top: 38px;
+
+  p {
+    font-size: 16px;
+    font-weight: 300;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.gym__content-picture {
+  margin: 0;
+  background-color: $color-ghost-white;
+  max-height: 401px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

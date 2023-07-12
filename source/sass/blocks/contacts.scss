@@ -1,0 +1,74 @@
+.contacts {
+  min-height: 337px;
+  padding: 56px 70px 45px 124px;
+}
+
+.contacts__content {
+  color: inherit;
+  display: grid;
+  max-width: 489px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 90px;
+
+  h3 {
+    grid-row: 1;
+    grid-column: 1/-1;
+    font-family: $ff-alumni;
+    margin: 0 0 37px -3px;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+  }
+
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  dt {
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  dd {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 16px;
+  }
+}
+
+.contacts__content-left {
+  position: relative;
+  grid-column: 1;
+  grid-row: 2;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 101px;
+    background-color: $color-slate-grey;
+    top: 7px;
+    right: -32px;
+  }
+}
+
+.contacts__content-right {
+  grid-column: 2;
+  grid-row: 2;
+
+  a {
+    outline-color: $color-sapphire;
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
+  }
+}

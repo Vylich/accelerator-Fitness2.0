@@ -1,0 +1,43 @@
+.footer {
+  min-height: 108px;
+  background-color: $color-black-russian;
+}
+
+.footer__wrapper {
+  display: flex;
+  max-width: 1250px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 100px;
+  padding: 30px 45px;
+}
+
+.footer__logo {
+  margin-top: 12px;
+}
+
+.footer__links-list {
+  list-style: none;
+  margin: 0 0 0 5px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 40px;
+
+  a {
+    color: $color-default-white;
+    font-size: 14px;
+    line-height: 16px;
+    transition: border $trans-default;
+
+    @include hover-focus {
+      border-bottom: 1px $color-default-white solid;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

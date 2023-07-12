@@ -1,26 +1,36 @@
-// .btn {
-//   display: inline-flex;
-//   padding: 10px 20px;
+.btn {
+  display: inline-flex;
+  padding: 24px 42px;
+  justify-content: center;
+  word-break: break-word;
+  outline-offset: 3px;
 
-//   color: $color-default-white;
+  color: $color-default-white;
 
-//   background-color: $color-neon-blue;
-//   border: none;
-//   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  user-select: none;
 
-//   transition: opacity $trans-default;
+  transition: color, background $trans-default;
 
-//   &--red {
-//     background-color: $color-torch-red;
-//   }
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 
-//   &:disabled {
-//     opacity: 0.5;
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+  }
 
-//     pointer-events: none;
-//   }
+  @include focus {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+  }
 
-//   @include hover-focus {
-//     opacity: 0.8;
-//   }
-// }
+  @include active {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+  }
+}
