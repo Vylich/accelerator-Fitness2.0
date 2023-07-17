@@ -1,0 +1,277 @@
+.discount {
+  padding: 173px 0 120px 0;
+
+  @include vp-1199 {
+    padding-top: 84px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+
+  h2 {
+    font-family: $ff-alumni;
+    letter-spacing: 0.03em;
+    margin: 0 0 34px 0;
+    font-size: 54px;
+    line-height: 65px;
+    font-weight: 600;
+    text-align: center;
+
+    @include vp-1199 {
+      font-size: 42px;
+      margin-bottom: 31px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 42px;
+    }
+  }
+}
+
+.discount__wrapper {
+  display: flex;
+  gap: 20px 40px;
+  justify-content: center;
+
+  @include vp-1199 {
+    flex-wrap: wrap;
+    row-gap: 31px;
+  }
+
+  @include vp-767 {
+    max-width: 460px;
+  }
+}
+
+.discount__promo {
+  align-self: center;
+}
+
+.discount__promo-inner {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+
+  @include vp-767 {
+    flex-wrap: wrap;
+  }
+}
+
+.discount__promo-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 280px;
+  min-height: 462px;
+  padding: 43px 45px 44px;
+  color: $color-default-white;
+  background-color: $color-red;
+  font-weight: 700;
+
+  @include vp-1199 {
+    padding-bottom: 41px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    min-height: 299px;
+    padding-bottom: 42px;
+    align-items: center;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom: 20px;
+    margin-top: 14px;
+    font-weight: 400;
+    font-size: 18px;
+
+    @include vp-767 {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  a {
+    position: relative;
+    font-size: 14px;
+    margin: auto auto 0 0;
+    text-transform: uppercase;
+    color: $color-default-white;
+    letter-spacing: 0.05em;
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $color-default-white;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: 1px;
+      right: 0;
+    }
+  }
+}
+
+.discount__promo-year {
+  margin: 0;
+  font-size: 28px;
+}
+
+.discount__info {
+  flex-grow: 1;
+}
+
+.discount__info-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px 0;
+
+  @include vp-1199 {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+
+.discount__promo-cost {
+  margin: 0;
+  font-size: 70px;
+  line-height: 80px;
+}
+
+.discount__info-container {
+  color: $color-resolution-blue;
+  display: flex;
+  flex-direction: column;
+  min-height: 211px;
+  max-width: 560px;
+  width: 100%;
+  border: 7px solid;
+  border-image: $border-gradient;
+  padding: 23px 28px 31px;
+
+  @include vp-1199 {
+    max-width: 324px;
+    padding: 25px 42px 30px 28px;
+
+    &:first-child {
+      padding: 25px 57px 30px 28px;
+    }
+  }
+
+  @include vp-767 {
+
+    &:first-child {
+      padding: 35px 41px 37px;
+    }
+
+    max-width: 100%;
+    text-align: center;
+    padding: 35px 55px 37px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  span {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  a {
+    position: relative;
+    color: $color-resolution-blue;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: auto auto 0 0;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    line-height: 14px;
+    outline-color: $color-sapphire;
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
+
+    @include vp-767 {
+      margin: auto;
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $color-resolution-blue;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: -1px;
+      right: 0;
+
+      @include vp-1199 {
+        bottom: -2px;
+      }
+    }
+  }
+}
+
+.discount__picture {
+  margin: 0;
+  background-color: $color-sapphire;
+
+  @include vp-767 {
+    width: 100%;
+    height: 299px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+
+    @include vp-1199 {
+      min-width: 399px;
+      height: 462px;
+
+    }
+
+    @include vp-767 {
+      min-width: 100%;
+      max-height: 500px;
+      height: 100%;
+      object-position: top;
+    }
+  }
+}

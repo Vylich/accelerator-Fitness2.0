@@ -3,7 +3,7 @@
 
 @import "vendor/normalize";
 // Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -19,9 +19,46 @@
 // ---------------------------------
 
 @import "blocks/btn";
-@import "blocks/custom-input";
-@import "blocks/custom-toggle";
-@import "blocks/custom-select";
+@import "blocks/logo";
+@import "blocks/general";
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/footer";
+@import "blocks/info-group";
+@import "blocks/form";
+@import "blocks/contacts";
+@import "blocks/gym";
+@import "blocks/video";
+@import "blocks/games";
+@import "blocks/social";
+@import "blocks/discount";
+@import "blocks/subscription";
+@import "blocks/tabs";
+@import "blocks/cards";
+@import "blocks/no-js";
+@import "blocks/benefits";
+@import "blocks/reviews";
+@import "blocks/faq";
+@import "blocks/accordion";
+@import "blocks/swiper";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ---------------------------------
 

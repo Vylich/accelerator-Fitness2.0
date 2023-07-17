@@ -1,0 +1,180 @@
+.intro__wrapper {
+  display: flex;
+  gap: 64px;
+
+  @include vp-1199 {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  @include vp-767 {
+
+  }
+
+  img {
+    margin-top: -22px;
+
+    @include vp-1199 {
+      margin-top: -9px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.intro__about {
+  display: flex;
+  flex-direction: column;
+  padding-top: 87px;
+
+  align-items: flex-end;
+  color: $color-default-white;
+  font-family: $ff-alumni;
+
+  @include vp-1199 {
+    padding-top: 33px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-top: 45px;
+  }
+
+  p {
+    margin: 0 56px;
+    font-size: 48px;
+    line-height: 59px;
+    font-weight: 600;
+
+    @include vp-1199 {
+      font-size: 34px;
+      margin: 0;
+      margin-right: 8px;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 33px;
+      margin-right: 5px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.intro__about-button {
+  padding: 20px 40px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  user-select: none;
+  word-break: break-word;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  font-family: $ff-roboto;
+  width: 234px;
+  background-color: transparent;
+  border: 4px solid $color-default-white;
+  color: $color-default-white;
+  margin-bottom: 10px;
+  margin-top: 48px;
+
+  @include vp-1199 {
+    margin-top: 36px;
+    width: 185px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-top: 1px;
+  }
+}
+
+.intro__about-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0 16px;
+
+
+  @include vp-1199 {
+
+    gap: 0;
+    align-content: space-between;
+  }
+
+  @include vp-767 {
+    position: relative;
+  }
+
+  h1 {
+    flex-grow: 1;
+    margin: 15px 0 0 2px;
+    letter-spacing: 0.05em;
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 92px;
+    line-height: 110px;
+    -webkit-text-stroke-width: 3px;
+
+    @include vp-1199 {
+      margin: 0;
+      font-size: 72px;
+      line-height: 86px;
+      text-transform: initial;
+      margin-left: 26px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 22px;
+      width: 200px;
+      margin-left: auto;
+    }
+  }
+
+  ul {
+    flex-shrink: 0;
+    margin: 0;
+    margin-top: 104px;
+    margin-left: 19px;
+    padding: 0;
+    list-style: none;
+
+    @include vp-1199 {
+      margin-top: 68px;
+      margin-left: 0;
+    }
+
+    @include vp-767 {
+      position: absolute;
+      left: 0;
+      top: 11px;
+    }
+  }
+
+  li {
+    font-weight: 400;
+    font-family: $ff-roboto;
+    font-size: 14px;
+    text-align: end;
+    overflow-wrap: break-word;
+    line-height: 21px;
+  }
+}
+
+.intro__about-picture {
+  margin: 0;
+
+  img {
+    object-fit: cover;
+
+    @include vp-1199 {
+      margin-top: -6px;
+      height: 390px;
+      width: 324px;
+    }
+  }
+}

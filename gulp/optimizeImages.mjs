@@ -16,7 +16,7 @@ const sprite = () =>
 
 const optimizeSvg = () =>
   gulp
-      .src('source/img/**/*.svg')
+      .src('build/img/**/*.svg')
       .pipe(
           imagemin([
             svgo({
@@ -38,13 +38,13 @@ const optimizeSvg = () =>
 
 const optimizeJpg = () =>
   gulp
-      .src('source/img/**/*.{jpg,jpeg}')
+      .src('build/img/**/*.{jpg,jpeg}')
       .pipe(imagemin([mozJpeg({quality: 90, progressive: true})]))
       .pipe(gulp.dest('build/img'));
 
 const optimizePng = () =>
   gulp
-      .src('source/img/**/*.png')
+      .src('build/img/**/*.png')
       .pipe(
           imagemin([
             pngQuant({
@@ -67,11 +67,11 @@ const optimizePng = () =>
 */
 
 const createWebp = () => {
-  const root = 'content';
+  const root = '';
   return gulp
       .src(`source/img/${root}**/*.{png,jpg}`)
       .pipe(webp({quality: 90}))
-      .pipe(gulp.dest('build/img/'));
+      .pipe(gulp.dest(`source/img/${root}`));
 };
 
 export {sprite, createWebp, optimizeSvg, optimizePng, optimizeJpg};

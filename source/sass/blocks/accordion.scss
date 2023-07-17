@@ -1,0 +1,174 @@
+.accordion {
+  padding-left: 40px;
+  width: 100%;
+
+  @include vp-1199 {
+    padding: 0;
+  }
+}
+
+.accordion__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.accordion__item {
+  padding: 34px 10px 26px 0;
+  width: 860px;
+  border-top: 1px solid $color-border-light-grey;
+  width: 100%;
+
+  @include vp-1199 {
+    max-width: 678px;
+    padding-top: 32px;
+    padding-bottom: 31px;
+  }
+
+  @include vp-767 {
+    padding: 20px 0;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $color-border-light-grey;
+  }
+}
+
+.accordion__content {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 139%;
+  color: $color-sapphire;
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  padding-right: 170px;
+
+  transition: max-height $trans-default, opacity $trans-default;
+
+  @include vp-1199 {
+    padding-right: 98px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    padding-right: 20px;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 17px;
+    transition: max-height $trans-default, opacity $trans-default;
+
+    @include vp-767 {
+      margin-top: 13px;
+    }
+  }
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-sapphire;
+  font-weight: 500;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+  padding-right: 50px;
+  margin-bottom: 7px;
+
+  br {
+    display: none;
+  }
+
+  @include vp-1199 {
+    white-space: normal;
+    line-height: 24px;
+    margin-bottom: 0;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 21.6px;
+
+    br {
+      display: block;
+    }
+  }
+
+  &.disabled {
+    span {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &.active {
+    span {
+      background-color: $color-sapphire !important;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    border: 1px solid $color-sapphire;
+    width: 42px;
+    height: 42px;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include vp-767 {
+      width: 32px;
+      height: 32px;
+      right: 0;
+    }
+
+    @include hover-focus {
+      background-color: $color-sapphire;
+
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  span::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-sapphire;
+  }
+
+  span::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 18px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-sapphire;
+  }
+}

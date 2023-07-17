@@ -19,13 +19,14 @@
 }
 
 @mixin active {
-  &.focus-visible:active {
+  &:active {
     @content;
   }
 }
 
 @mixin hover-focus {
   @media (hover: hover) {
+
     &:hover:not(.focus-visible) {
       @content;
     }
@@ -38,26 +39,8 @@
 
 // Desktop first
 
-@mixin vp-1919 {
-  @media (max-width: ($vp-1920 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1439 {
-  @media (max-width: ($vp-1440 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1279 {
-  @media (max-width: ($vp-1280 - 1px)) {
-    @content;
-  }
-}
-
-@mixin vp-1023 {
-  @media (max-width: ($vp-1024 - 1px)) {
+@mixin vp-1199 {
+  @media (max-width: ($vp-1200 - 1px)) {
     @content;
   }
 }
@@ -68,50 +51,51 @@
   }
 }
 
-@mixin vp-374 {
-  @media (max-width: ($vp-375 - 1px)) {
-    @content;
-  }
+
+@mixin gradient-text {
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(
+    127.61deg,
+    $color-crimson 0%,
+    $color-cobalt 87.33%
+  );
+  background-clip: text;
 }
 
-// Mobile first
 
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
+@mixin background-image($filename, $ext: "jpg") {
+  @supports (background-image: url("../img/content/#{$filename}.webp")) {
+    background-image: url("../img/content/#{$filename}.webp");
 
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
+    @include vp-1199 {
+      background-image: url("../img/content/#{$filename}-tablet.webp");
+    }
 
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
+    @include vp-767 {
+      background-image: url("../img/content/#{$filename}-mobile.webp");
+    }
 
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
+    @include retina {
+      background-image: url("../img/content/#{$filename}@2x.webp");
 
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
+      @include vp-1199 {
+        background-image: url("../img/content/#{$filename}-tablet@2x.webp");
+      }
 
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
+      @include vp-767 {
+        background-image: url("../img/content/#{$filename}-mobile@2x.webp");
+      }
+    }
+  }
 
+  @supports not (background-image: url("../img/content/#{$filename}.webp")) {
+    background-image: url("../img/content/#{$filename}.#{$ext}");
+
+    @include retina {
+      background-image: url("../img/content/#{$filename}@2x.#{$ext}");
+    }
+  }
+}
 // ---------------------------------
 
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие

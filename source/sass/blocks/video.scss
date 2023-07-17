@@ -1,0 +1,76 @@
+.video {
+  position: absolute;
+  left: 53%;
+  top: 403px;
+  width: 364px;
+  height: 228px;
+  transform: translate(-50%, -50%);
+  background-color: $color-default-black;
+
+  @include hover-focus {
+
+    .video__button {
+      background-image: url("../img/icons/video-button-hover.svg");
+    }
+  }
+
+  @include active {
+    .video__button {
+      background-image: url("../img/icons/video-button-active.svg");
+    }
+  }
+
+  @include vp-1199 {
+    top: 570px;
+    width: 266px;
+    height: 167px;
+    left: 50%;
+  }
+
+  @include vp-767 {
+    padding-bottom: 52.25%;
+    margin-top: 39px;
+    transform: translate(0);
+    position: static;
+    width: 100%;
+    height: 167px;
+  }
+}
+
+.video.is-active {
+  cursor: pointer;
+}
+
+.video__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video__button {
+  border: none;
+  padding: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/icons/video-button.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+
+  @include active {
+    background-image: url("../img/icons/video-button-active.svg");
+  }
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+  }
+}

@@ -1,0 +1,131 @@
+.contacts {
+  min-height: 337px;
+  padding: 56px 70px 45px 124px;
+
+  @include vp-1199 {
+    padding: 62px 104px 43px 133px;
+  }
+
+  @include vp-767 {
+    padding: 63px 15px 42px 15px;
+  }
+}
+
+.contacts__content {
+  color: inherit;
+  display: grid;
+  max-width: 489px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 90px;
+
+  @include vp-1199 {
+    max-width: 531px;
+    gap: 0 96px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  h3 {
+    grid-row: 1;
+    grid-column: 1/-1;
+    font-family: $ff-alumni;
+    margin: 0 0 37px -3px;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 65px;
+    letter-spacing: 0.03em;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin-bottom: 32px;
+      margin-left: 0;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 36px;
+    }
+  }
+
+  dl,
+  dd {
+    margin: 0;
+  }
+
+  dt {
+    font-weight: 700;
+    margin-bottom: 4px;
+
+    @include vp-1199 {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 9px;
+    }
+  }
+
+  dd {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 16px;
+
+    @include vp-1199 {
+      font-size: 18px;
+      margin-bottom: 22px;
+    }
+  }
+}
+
+.contacts__content-left {
+  position: relative;
+  grid-column: 1;
+  grid-row: 2;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 101px;
+    background-color: $color-slate-grey;
+    top: 7px;
+    right: -32px;
+
+    @include vp-1199 {
+      top: 8px;
+      right: -50px;
+      height: 128px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.contacts__content-right {
+  grid-column: 2;
+  grid-row: 2;
+
+  a {
+    outline-color: $color-sapphire;
+
+    @include hover-focus {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
+  }
+
+  @include vp-767 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
