@@ -12,7 +12,7 @@ const copy = () =>
   gulp.src([
     'source/**.html',
     'source/fonts/**',
-    'source/favicon/**',
+    'source/favicons/**',
     'source/img/**'
   ], {
     base: 'source',
