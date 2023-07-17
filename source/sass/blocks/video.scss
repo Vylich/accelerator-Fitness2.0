@@ -8,7 +8,6 @@
   background-color: $color-default-black;
 
   @include hover-focus {
-
     .video__button {
       background-image: url("../img/icons/video-button-hover.svg");
     }

@@ -2277,7 +2277,7 @@ button,
 }
 
 .social__icon--vk.focus-visible:focus {
-  background-color: #103AAE;
+  background-color: #103aae;
 }
 
 .social__icon--ok.focus-visible:focus {
@@ -3298,7 +3298,6 @@ button,
 
 .accordion__item {
   padding: 34px 10px 26px 0;
-  width: 860px;
   border-top: 1px solid rgba(16, 38, 84, 0.2);
   width: 100%;
 }
@@ -3360,6 +3359,7 @@ button,
 
 .accordion__header.active span {
   background-color: #102654 !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .accordion__header.active span::after {
@@ -4776,7 +4776,7 @@ button,
   }
 
   .social__icon--vk:hover:not(.focus-visible) {
-    background-color: #103AAE;
+    background-color: #103aae;
   }
 
   .social__icon--ok:hover:not(.focus-visible) {

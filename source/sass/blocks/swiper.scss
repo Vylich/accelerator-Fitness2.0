@@ -2,7 +2,7 @@
 .swiper-button-next {
   width: 56px;
   height: 56px;
-  border: 1px $color-transparent solid;;
+  border: 1px $color-transparent solid;
   border-radius: 50%;
   outline: none;
   background-color: transparent;
@@ -34,8 +34,8 @@
 .swiper-button-prev::after,
 .swiper-button-next::after {
   position: absolute;
-  content: '';
-  mask-image: url('../img/icons/btn-prev.svg');
+  content: "";
+  mask-image: url("../img/icons/btn-prev.svg");
 
   mask-size: cover;
   background-color: $color-sapphire;
@@ -46,7 +46,6 @@
     width: 11px;
     height: 22px;
   }
-
 }
 
 

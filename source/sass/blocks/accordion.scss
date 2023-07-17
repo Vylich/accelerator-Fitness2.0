@@ -16,7 +16,6 @@
 
 .accordion__item {
   padding: 34px 10px 26px 0;
-  width: 860px;
   border-top: 1px solid $color-border-light-grey;
   width: 100%;
 
@@ -111,7 +110,8 @@
 
   &.active {
     span {
-      background-color: $color-sapphire !important;
+
+      background-color: $color-sapphire !important; /* stylelint-disable-line declaration-no-important */
 
       &::after {
         display: none;

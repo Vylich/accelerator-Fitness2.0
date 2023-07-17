@@ -26,7 +26,6 @@
 
 @mixin hover-focus {
   @media (hover: hover) {
-
     &:hover:not(.focus-visible) {
       @content;
     }
