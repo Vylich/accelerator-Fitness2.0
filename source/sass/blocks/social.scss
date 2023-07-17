@@ -8,6 +8,15 @@
   max-width: 130px;
   margin-right: -4px;
   gap: 11px;
+
+  @include vp-1199 {
+    gap: 12px;
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 35px;
+  }
 }
 
 .social__link {

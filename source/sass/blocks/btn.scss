@@ -4,6 +4,7 @@
   justify-content: center;
   word-break: break-word;
   outline-offset: 3px;
+  white-space: nowrap;
 
   color: $color-default-white;
 
@@ -14,9 +15,15 @@
 
   transition: color, background $trans-default;
 
-  &:disabled {
+  &.disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+
+
+  @include active {
+    background-color: $color-default-white;
+    color: $color-sapphire;
   }
 
   @include hover-focus {
@@ -29,8 +36,5 @@
     color: $color-egyptian-blue;
   }
 
-  @include active {
-    background-color: $color-default-white;
-    color: $color-sapphire;
-  }
+
 }

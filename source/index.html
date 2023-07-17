@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +12,7 @@
       <div class="general">
         <header class="header">
           <div class="header__wrapper container">
-            <a class="header__logo logo" aria-hidden="true">
-              <span class="visually-hidden">На главную</span>
-              <svg width="122" height="44" focusable="false" aria-hidden="true">
-                <use xlink:href="img/icons/sprite.svg#logo"></use>
-              </svg>
-            </a>
+            <a class="header__logo logo" aria-hidden="true"> SUPERGYM </a>
             <nav class="header__nav">
               <a href="tel:88005555555">8-800-555-55-55</a>
             </nav>
@@ -35,12 +30,26 @@
                 </ul>
                 <h1>Фитнес<br />центр</h1>
               </div>
-              <a class="intro__about-button btn" href="#tickets"
-                >Купить абонемент</a
+              <a class="intro__about-button btn"  href="#tickets"
+                ><span>купить абонемент</span></a
               >
             </div>
             <p class="intro__about-picture">
               <picture>
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="
+                    img/content/intro-tablet.jpg    1x,
+                    img/content/intro-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="
+                    img/content/intro-tablet.webp    1x,
+                    img/content/intro-tablet@2x.webp 2x
+                  "
+                />
                 <source
                   type="image/webp"
                   srcset="
@@ -71,10 +80,10 @@
               <p>Просторный зал площадью 900 кв/м</p>
               <div class="gym__text">
                 <p>
-                  Supergym - самый большой фитнес центр за Уралом и идеальное
-                  место для укрепления тела и здоровья. Тренажерный зал оснащен
-                  всем необходимым современным оборудованием для всех
-                  спортсменов.
+                  Supergym &ndash; самый большой фитнес центр за Уралом и
+                  идеальное место для укрепления тела и здоровья. Тренажерный
+                  зал оснащен всем необходимым современным оборудованием для
+                  всех спортсменов.
                 </p>
                 <p>
                   В зале расположены отдельная зона для Crossfit и кардио-зона с
@@ -85,6 +94,34 @@
             </div>
             <p class="gym__content-picture">
               <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/content/gym-mobile.jpg    1x,
+                    img/content/gym-mobile@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/content/gym-mobile.webp    1x,
+                    img/content/gym-mobile@2x.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="
+                    img/content/gym-tablet.jpg    1x,
+                    img/content/gym-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="
+                    img/content/gym-tablet.webp    1x,
+                    img/content/gym-tablet@2x.webp 2x
+                  "
+                />
                 <source
                   type="image/webp"
                   width="660"
@@ -163,21 +200,21 @@
                     <p>12 занятий</p>
                     <span class="subscription__min-text">5000</span>
                     <span class="subscription__max-text">5000</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                   <li class="subscription__item" tabindex="0">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
                     <span class="subscription__min-text">1700</span>
                     <span class="subscription__max-text">1700</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                   <li class="subscription__item" tabindex="0">
                     <h4>Полный день</h4>
                     <p>с 8:00 до 22:00</p>
                     <span class="subscription__min-text">2700</span>
                     <span class="subscription__max-text">2700</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                 </ul>
               </div>
@@ -188,21 +225,21 @@
                     <p>12 занятий</p>
                     <span class="subscription__min-text">7000</span>
                     <span class="subscription__max-text">7000</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                   <li class="subscription__item" tabindex="0">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
                     <span class="subscription__min-text">2700</span>
                     <span class="subscription__max-text">2700</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                   <li class="subscription__item" tabindex="0">
                     <h4>Полный день</h4>
                     <p>с 8:00 до 22:00</p>
                     <span class="subscription__min-text">3700</span>
                     <span class="subscription__max-text">3700</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                 </ul>
               </div>
@@ -213,21 +250,21 @@
                     <p>12 занятий</p>
                     <span class="subscription__min-text">9000</span>
                     <span class="subscription__max-text">9000</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                   <li class="subscription__item" tabindex="0">
                     <h4>Дневной</h4>
                     <p>с 8:00 до 17:00</p>
                     <span class="subscription__min-text">3700</span>
                     <span class="subscription__max-text">3700</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                   <li class="subscription__item" tabindex="0">
                     <h4>Полный день</h4>
                     <p>с 8:00 до 22:00</p>
                     <span class="subscription__min-text">4700</span>
                     <span class="subscription__max-text">4700</span>
-                    <a class="btn" href="#!">купить абонемент</a>
+                    <a class="btn" href="#!"><span>купить абонемент</span></a>
                   </li>
                 </ul>
               </div>
@@ -268,6 +305,20 @@
             <p class="games__picture">
               <picture>
                 <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/content/man-hit-mobile.jpg    1x,
+                    img/content/man-hit-mobile@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/content/man-hit-mobile.webp    1x,
+                    img/content/man-hit-mobile@2x.webp 2x
+                  "
+                />
+                <source
                   type="image/webp"
                   width="660"
                   height="500"
@@ -295,7 +346,7 @@
           <div class="cards__wrapper container">
             <button
               type="button"
-              class="cards__button-prev swiper-button-prev btn btn--slider no-js"
+              class="cards__button-prev swiper-button-prev no-js"
               aria-label="кнопка назад"
             ></button>
             <h2>Тренеры</h2>
@@ -529,7 +580,7 @@
             </div>
             <button
               type="button"
-              class="cards__button-next swiper-button-next btn btn--slider no-js"
+              class="cards__button-next swiper-button-next no-js"
               aria-label="кнопка вперёд"
             ></button>
           </div>
@@ -549,7 +600,9 @@
                 <span>Занимайтесь без очередей и толпучки</span>
               </div>
             </div>
-            <div class="benefits__info-container">
+            <div
+              class="benefits__info-container benefits__info-container--right"
+            >
               <div class="benefits__info-number">
                 <p>70</p>
                 <span>машин</span>
@@ -581,7 +634,9 @@
               </div>
               <p>Современные тренажеры на все группы мышц</p>
             </div>
-            <div class="benefits__info-container">
+            <div
+              class="benefits__info-container benefits__info-container--right"
+            >
               <div class="benefits__info-number">
                 <p>5+</p>
                 <span>лет</span>
@@ -609,6 +664,20 @@
                 </div>
                 <p class="discount__picture">
                   <picture>
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        img/content/sales-tablet.jpg    1x,
+                        img/content/sales-tablet@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        img/content/sales-tablet.webp    1x,
+                        img/content/sales-tablet@2x.webp 2x
+                      "
+                    />
                     <source
                       type="image/webp"
                       width="280"
@@ -650,18 +719,31 @@
           <h2>Вопросы и ответы</h2>
           <div class="faq__wrapper container">
             <div class="faq__category">
-              <button>Центр</button>
-              <button>Абонемент</button>
-              <button>Услуги</button>
-              <button>Правила</button>
+              <button data-acc-tab="1" type="button" class="faq__btn btn">
+                Центр
+              </button>
+              <button
+                data-acc-tab="2"
+                type="button"
+                class="faq__btn btn is-active"
+              >
+                Абонемент
+              </button>
+              <button data-acc-tab="3" type="button" class="faq__btn btn">
+                Услуги
+              </button>
+              <button data-acc-tab="4" type="button" class="faq__btn btn">
+                Правила
+              </button>
             </div>
-            <div id="center" class="faq__accordion accordion">
+            <div data-acc-list="1" class="faq__accordion accordion">
               <div class="accordion__container">
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-1" class="accordion__header">
                     Как стать членом фитнес-центра?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-1" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -669,10 +751,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-2" class="accordion__header">
                     Где можно посмотреть расписание?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-2" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -680,10 +763,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-3" class="accordion__header">
                     Есть кулеры в центре? Предоставляются полотенца?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-3" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -691,10 +775,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
-                    Сколько тренеров работает в клубе и какова их квалификация?
+                  <div data-header="header-4" class="accordion__header">
+                    Сколько тренеров работает в клубе и какова<br> их квалификация?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-4" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -703,13 +788,14 @@
                 </div>
               </div>
             </div>
-            <div id="season" class="faq__accordion accordion">
+            <div data-acc-list="2" class="faq__accordion accordion">
               <div class="accordion__container">
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-5" class="accordion__header">
                     Занятия с тренером входят в абонемент?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-5" class="accordion__content">
                     При посещении тренажерного зала вам необходимо оплатить
                     занятия с тренером отдельно. В зале всегда присутствует
                     дежурный тренер, которому можно задать вопрос, получить
@@ -718,10 +804,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-6" class="accordion__header">
                     Можно ли заморозить абонемент?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-6" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -729,11 +816,12 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-7" class="accordion__header">
                     Есть ли лимит по посещениям тренажерного зала и групповых
                     занятий?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-7" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -741,10 +829,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-8" class="accordion__header">
                     Что такое семейный доступ и доступ для друзей?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-8" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -753,25 +842,27 @@
                 </div>
               </div>
             </div>
-            <div id="services" class="faq__accordion accordion">
+            <div data-acc-list="3" class="faq__accordion accordion">
               <div class="accordion__container">
                 <div class="accordion__item">
-                  <div class="accordion__header">
-                    Предлагает ли клуб услуги по консультированию по вопросам
+                  <div data-header="header-9" class="accordion__header">
+                    Предлагает ли клуб услуги<br> по консультированию<br> по вопросам
                     питания?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-9" class="accordion__content">
                     Да. Вы можете обратиться как к своему тренеру, так и к
                     нашему нутрициологу. Специалист уточнит ваши данные, цели и
                     предложит программу питания.
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
-                    Проводятся ли в клубе какие-либо мероприятия или
+                  <div data-header="header-10" class="accordion__header">
+                    Проводятся ли в клубе<br> какие-либо мероприятия<br> или
                     соревнования?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-10" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -779,10 +870,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-11" class="accordion__header">
                     Можно ли приобрести в центре спортивное питание?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-11" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -790,10 +882,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-12" class="accordion__header">
                     Есть ли в центре детская комната?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-12" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -802,13 +895,14 @@
                 </div>
               </div>
             </div>
-            <div id="rules" class="faq__accordion accordion">
+            <div data-acc-list="4" class="faq__accordion accordion">
               <div class="accordion__container">
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-13" class="accordion__header">
                     Есть в фитнес-центре дресс-код?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-13" class="accordion__content">
                     Для тренировок необходимо иметь предназначенную для этого
                     закрытую спортивную обувь и одежду. Верхняя и нижняя части
                     тела должны быть закрыты (используйте футболки, майки,
@@ -819,10 +913,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-14" class="accordion__header">
                     Можно ли приводить с собой детей на тренировки?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-14" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -830,10 +925,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-15" class="accordion__header">
                     Какие дополнительные правила посещения центра?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-15" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -841,10 +937,11 @@
                   </div>
                 </div>
                 <div class="accordion__item">
-                  <div class="accordion__header">
+                  <div data-header="header-16" class="accordion__header">
                     Нужна ли медицинская справка для посещения залов и бассейна?
+                    <span></span>
                   </div>
-                  <div class="accordion__content">
+                  <div id="header-16" class="accordion__content">
                     При первом посещении и покупке абонемента, необходимо
                     заполнить анкету и подписать договор. При покупке абонемента
                     онлайн, анкета также заполняется онлайн и договор придет вам
@@ -859,7 +956,7 @@
           <div class="reviews__wrapper container">
             <button
               type="button"
-              class="reviews__button-prev swiper-button-prev btn btn--slider no-js"
+              class="reviews__button-prev swiper-button-prev no-js"
               aria-label="previous-slide"
             ></button>
             <h2>Отзывы</h2>
@@ -889,9 +986,10 @@
                       </p>
                       <p class="reviews__content-name">Анна Орлова</p>
                       <span>
-                        "Хожу в SuperClub уже больше года. Нравится, что в клубе
-                        всегда чисто, тренажеры обновляют, персонал дружелюбный.
-                        Зал просторный, даже в вечернее время нет очередей"
+                        &#171;Хожу в Supergym уже больше года. Нравится, что в
+                        клубе всегда чисто, тренажеры обновляют, персонал
+                        дружелюбный. Зал просторный, даже в вечернее время нет
+                        очередей&#187;
                       </span>
                     </div>
                   </div>
@@ -920,9 +1018,10 @@
                       </p>
                       <p class="reviews__content-name">Анна Орлова</p>
                       <span>
-                        "Хожу в SuperClub уже больше года. Нравится, что в клубе
-                        всегда чисто, тренажеры обновляют, персонал дружелюбный.
-                        Зал просторный, даже в вечернее время нет очередей"
+                        &#171;Хожу в Supergym уже больше года. Нравится, что в
+                        клубе всегда чисто, тренажеры обновляют, персонал
+                        дружелюбный. Зал просторный, даже в вечернее время нет
+                        очередей&#187;
                       </span>
                     </div>
                   </div>
@@ -931,7 +1030,7 @@
             </div>
             <button
               type="button"
-              class="reviews__button-next swiper-button-next btn btn--slider no-js"
+              class="reviews__button-next swiper-button-next no-js"
               aria-label="next-slide"
             ></button>
           </div>
@@ -986,12 +1085,7 @@
       </main>
       <footer class="footer">
         <div class="footer__wrapper container">
-          <a class="footer__logo logo" href="#" aria-hidden="true">
-            <span class="visually-hidden">На главную</span>
-            <svg width="88" height="32" focusable="false" aria-hidden="true">
-              <use xlink:href="img/icons/sprite.svg#logo"></use>
-            </svg>
-          </a>
+          <a class="footer__logo logo" aria-hidden="true"> SUPERGYM </a>
           <nav class="footer__links">
             <ul class="footer__links-list">
               <li><a href="#">Услуги</a></li>

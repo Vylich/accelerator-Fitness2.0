@@ -8,11 +8,32 @@
   background-color: $color-default-black;
 
   @include hover-focus {
-    img,
+
     .video__button {
-      opacity: 0.8;
-      transition: $trans-default;
+      background-image: url("../img/icons/video-button-hover.svg");
     }
+  }
+
+  @include active {
+    .video__button {
+      background-image: url("../img/icons/video-button-active.svg");
+    }
+  }
+
+  @include vp-1199 {
+    top: 570px;
+    width: 266px;
+    height: 167px;
+    left: 50%;
+  }
+
+  @include vp-767 {
+    padding-bottom: 52.25%;
+    margin-top: 39px;
+    transform: translate(0);
+    position: static;
+    width: 100%;
+    height: 167px;
   }
 }
 
@@ -44,7 +65,12 @@
   height: 100px;
   cursor: pointer;
 
-  @include focus {
-    outline: 2px solid;
+  @include active {
+    background-image: url("../img/icons/video-button-active.svg");
+  }
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
   }
 }

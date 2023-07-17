@@ -1,0 +1,256 @@
+.subscription {
+  position: relative;
+  min-height: 851px;
+  padding-top: 120px;
+  background-color: $color-ghost-white;
+  margin-bottom: 120px;
+
+  @include vp-1199 {
+    padding-top: 101px;
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 65px;
+    margin-bottom: 70px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 290px;
+    height: 495px;
+    bottom: -151px;
+    right: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include background-image("barbell", 'png');
+
+    @include vp-1199 {
+      bottom: -177px;
+      right: 0;
+      width: 348px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  h2 {
+    letter-spacing: 0.03em;
+    font-family: $ff-alumni;
+    text-align: center;
+    font-size: 54px;
+    line-height: 65px;
+    margin: 0;
+    margin-bottom: 18px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+}
+
+.subscription__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscription__content {
+  padding: 38px 0 100px;
+
+  @include vp-1199 {
+    padding-top: 30px;
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding: 20px 0 50px;
+  }
+}
+
+.subscription__list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 42px;
+  list-style: none;
+  margin: 0 0 20px;
+  padding: 0;
+
+  @include vp-1199 {
+    grid-template-columns: minmax(290px, 442px);
+    gap: 40px;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+  }
+}
+
+.subscription__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-default-white;
+  padding: 56px 69px;
+  min-height: 448px;
+  max-width: 360px;
+  min-width: 290px;
+  z-index: 1;
+  overflow-wrap: break-word;
+  border: 7px solid $color-transparent;
+
+  @include hover-focus {
+    border-image: $border-gradient;
+    outline: none;
+
+    a {
+      border: 1px solid $color-default-white;
+      background: $button-gradient;
+      color: $color-default-white;
+
+      @include active {
+
+        span {
+          opacity: 0.7;
+        }
+
+      }
+    }
+  }
+
+  @include vp-1199 {
+    max-width: 100%;
+    min-width: 290px;
+  }
+
+  @include vp-767 {
+    padding: 41px 33px;
+    min-height: 384px;
+  }
+
+  h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+
+    @include vp-767 {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: $color-chambrey;
+    padding-bottom: 65px;
+
+    @include vp-767 {
+      padding-bottom: 55px;
+    }
+  }
+
+  a {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    border: 2px solid $color-sapphire;
+    width: 206px;
+    cursor: pointer;
+    color: $color-sapphire;
+    padding: 24px 30px;
+    transition: border, background, color $trans-default;
+
+    @include focus {
+      outline-color: $color-sapphire;
+    }
+  }
+}
+
+.subscription__min-text {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 700;
+  color: $color-egyptian-blue;
+  font-size: 60px;
+  padding: 0 44px 35px 0;
+  line-height: 150%;
+
+  @include vp-767 {
+    font-size: 48px;
+    padding: 0 33px 30px 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/icons/icon-rub.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 42px;
+    top: 37%;
+    right: -9%;
+    transform: translate(-50%, -50%);
+
+    @include vp-767 {
+      width: 24px;
+      height: 33px;
+      right: -11%;
+      top: 36%;
+    }
+  }
+}
+
+.subscription__max-text {
+  position: absolute;
+  opacity: 0.5;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: 700;
+  color: $color-grey;
+  z-index: -1;
+  user-select: none;
+  line-height: 150%;
+
+  @include vp-767 {
+    font-size: 80px;
+    top: 46%;
+  }
+}
+
+.subscription__content-wrapper {
+  display: none;
+  opacity: 0;
+  animation: tab_fade 0.6s ease 1 forwards;
+}
+
+.subscription__content-wrapper.is-active {
+  display: block;
+}
+
+
+@keyframes tab_fade {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
