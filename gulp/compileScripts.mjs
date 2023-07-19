@@ -5,6 +5,7 @@ import browserify from 'browserify';
 import uglify from 'gulp-uglify';
 import vinylBuffer from 'vinyl-buffer';
 import vinylSourceStream from 'vinyl-source-stream';
+import strip from 'gulp-strip-comments';
 
 const compileMainMinScripts = () =>
   browserify('source/js/main.js', {debug: true})
@@ -12,6 +13,7 @@ const compileMainMinScripts = () =>
       .bundle()
       .pipe(vinylSourceStream('main.js'))
       .pipe(vinylBuffer())
+      .pipe(strip())
       .pipe(uglify())
       .pipe(concat('main.min.js'))
       .pipe(gulp.dest('build/js'));
@@ -22,6 +24,7 @@ const compileMainScripts = () =>
       .bundle()
       .pipe(vinylSourceStream('main.js'))
       .pipe(vinylBuffer())
+      .pipe(strip())
       .pipe(sourcemaps.init({loadMaps: true}))
       .pipe(concat('main.min.js'))
       .pipe(sourcemaps.write('.'))

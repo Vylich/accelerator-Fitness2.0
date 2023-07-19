@@ -45,12 +45,14 @@
     "gulp-rename": "2.0.0",
     "gulp-sass": "5.1.0",
     "gulp-sourcemaps": "3.0.0",
+    "gulp-strip-comments": "^2.5.2",
     "gulp-svgstore": "9.0.0",
     "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",
     "imagemin-mozjpeg": "10.0.0",
     "imagemin-pngquant": "9.0.2",
     "imagemin-svgo": "10.0.1",
+    "postcss-discard-comments": "^6.0.0",
     "postcss-scss": "4.0.6",
     "sass": "1.53.0",
     "stylelint": "^14.16.1",
@@ -60,8 +62,5 @@
   },
   "engines": {
     "node": ">=16.15.1"
-  },
-  "dependencies": {
-    "swiper": "^10.0.4"
   }
 }

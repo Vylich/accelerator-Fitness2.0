@@ -141,7 +141,6 @@
   p {
     margin: 0;
     text-align: center;
-    color: $color-spindle;
 
     @include vp-1199 {
       margin-left: -5px;
@@ -150,35 +149,30 @@
 
   ul {
     margin: 0;
-    padding: 32px 0 0 41px;
+    padding: 35px 0 0 25px;
     list-style: none;
+
     color: $color-default-white;
 
     @include vp-1199 {
-      padding-left: 30px;
+      padding-left: 14px;
     }
+  }
 
-    li {
-      position: relative;
-      margin: 0 auto;
-      margin-bottom: 13px;
-      font-size: 14px;
+  li {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 13px;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 21px;
+    background-image: url("../img/icons/list-dot.svg");
+    background-position: 0 6px;
+    background-repeat: no-repeat;
+  }
 
-      &::before {
-        position: absolute;
-        content: "";
-        top: 8px;
-        left: -15px;
-        width: 6px;
-        height: 6px;
-        background-color: $color-default-white;
-        border-radius: 50%;
-      }
-    }
-
-    li:last-child {
-      margin-bottom: 0;
-    }
+  li:last-child {
+    margin-bottom: 0;
   }
 }
 

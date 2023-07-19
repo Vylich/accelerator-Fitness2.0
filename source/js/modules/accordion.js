@@ -32,6 +32,7 @@ const showAccordion = () => {
 
 const showContentAccordion = () => {
   headers.forEach((header) => {
+    header.insertAdjacentHTML('beforeEnd', '<span></span>');
     header.addEventListener('click', () => {
       const activeContent = document.querySelector('#' + header.dataset.header);
 

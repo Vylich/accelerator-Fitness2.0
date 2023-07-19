@@ -41,6 +41,7 @@
 .form__content {
   max-width: 410px;
   margin-left: auto;
+  z-index: 10;
 
   @include vp-1199 {
     max-width: 100%;
@@ -52,6 +53,7 @@
   display: flex;
   gap: 0 28px;
   margin-bottom: 27px;
+  border: none;
 
   @include vp-1199 {
     gap: 0 60px;
@@ -77,7 +79,7 @@
     font-size: 14px;
     line-height: 16px;
     outline-color: $color-default-white;
-    border-bottom: 1px solid $color-slate-grey;
+    border-bottom: 1px solid $color-white-border;
     outline-offset: 3px;
 
     @include vp-1199 {
@@ -88,8 +90,8 @@
       outline: 2px solid;
     }
 
-    @include hover-focus {
-      opacity: 0.8;
+    @include hover {
+      border-color: $color-default-white;
     }
 
     @include vp-767 {

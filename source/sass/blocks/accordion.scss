@@ -111,7 +111,7 @@
   &.active {
     span {
 
-      background-color: $color-sapphire !important; /* stylelint-disable-line declaration-no-important */
+      background-color: $color-sapphire;
 
       &::after {
         display: none;

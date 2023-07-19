@@ -6,6 +6,8 @@ import autoprefixer from 'autoprefixer';
 import csso from 'gulp-csso';
 import gcmq from 'gulp-group-css-media-queries';
 import rename from 'gulp-rename';
+import discardComments from 'postcss-discard-comments';
+
 
 const sass = gulpSass(dartSass);
 
@@ -17,7 +19,8 @@ const compileStyles = () =>
           postcss([
             autoprefixer({
               grid: true,
-            })]))
+            }),
+            discardComments()]))
       .pipe(gulp.dest('build/css'))
       .pipe(csso())
       .pipe(rename('style.min.css'))

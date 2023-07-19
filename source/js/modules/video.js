@@ -36,7 +36,6 @@ function createIframe(id) {
   let iframe = document.createElement('iframe');
 
   iframe.setAttribute('allowfullscreen', '');
-  iframe.setAttribute('allow', 'autoplay');
   iframe.setAttribute('src', generateURL(id));
   iframe.classList.add('video__media');
 
