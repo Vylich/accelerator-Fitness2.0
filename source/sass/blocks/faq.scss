@@ -82,18 +82,18 @@
   width: 260px;
   cursor: pointer;
   color: $color-sapphire;
-  padding: 17px 105px;
+  padding: 17px 60px;
   transition: border, background, color $trans-default;
 
   @include vp-1199 {
     width: 162px;
-    padding: 17px 58px;
+    padding: 17px 30px;
   }
 
   @include vp-767 {
     font-size: 16px;
     width: 141px;
-    padding: 12px 48px;
+    padding: 12px 30px;
   }
 
   @include hover-focus {

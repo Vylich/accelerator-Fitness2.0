@@ -1,6 +1,7 @@
 .contacts {
   min-height: 337px;
   padding: 56px 70px 45px 124px;
+  border-top: 1px solid $color-sapphire;
 
   @include vp-1199 {
     padding: 62px 104px 43px 133px;

@@ -81,10 +81,6 @@
   padding-right: 50px;
   margin-bottom: 7px;
 
-  br {
-    display: none;
-  }
-
   @include vp-1199 {
     white-space: normal;
     line-height: 24px;
@@ -95,22 +91,28 @@
     font-size: 18px;
     margin-bottom: 0;
     line-height: 21.6px;
+  }
 
-    br {
-      display: block;
+  @include hover-focus {
+    button {
+      background-color: $color-sapphire;
+
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
     }
   }
 
   &.disabled {
-    span {
+    button {
       opacity: 0.5;
       pointer-events: none;
     }
   }
 
   &.active {
-    span {
-
+    button {
       background-color: $color-sapphire;
 
       &::after {
@@ -123,16 +125,17 @@
     }
   }
 
-  span {
+  button {
     position: absolute;
     border: 1px solid $color-sapphire;
     width: 42px;
     height: 42px;
     top: 50%;
     right: -10px;
+    background-color: transparent;
     transform: translateY(-50%);
     border-radius: 50%;
-    cursor: pointer;
+    pointer-events: none;
 
     @include vp-767 {
       width: 32px;
@@ -140,7 +143,7 @@
       right: 0;
     }
 
-    @include hover-focus {
+    @include focus {
       background-color: $color-sapphire;
 
       &::before,
@@ -150,7 +153,7 @@
     }
   }
 
-  span::before {
+  button::before {
     content: "";
     position: absolute;
     width: 18px;
@@ -161,7 +164,7 @@
     background-color: $color-sapphire;
   }
 
-  span::after {
+  button::after {
     content: "";
     position: absolute;
     width: 1px;
