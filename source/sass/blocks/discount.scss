@@ -253,7 +253,6 @@
 
   @include vp-767 {
     width: 100%;
-    height: 299px;
   }
 
   img {
@@ -263,13 +262,14 @@
     @include vp-1199 {
       min-width: 399px;
       height: 462px;
+      object-position: top;
     }
 
     @include vp-767 {
       min-width: 100%;
-      max-height: 500px;
       height: 100%;
       object-position: top;
+      object-fit: contain;
     }
   }
 }

@@ -39,7 +39,17 @@
       <div class="general">
         <header class="header">
           <div class="header__wrapper container">
-            <a class="header__logo logo" aria-hidden="true"> SUPERGYM </a>
+            <a class="header__logo logo" aria-hidden="true">
+              <span class="visually-hidden">На&nbsp;главную</span>
+              <svg
+                width="122"
+                height="44"
+                focusable="false"
+                aria-hidden="true"
+              >
+                <use xlink:href="img/icons/sprite.svg#logo"></use>
+              </svg>
+            </a>
             <nav class="header__nav">
               <a href="tel:88005555555">8-800-555-55-55</a>
             </nav>
@@ -170,6 +180,20 @@
               <a data-video-link href="https://youtu.be/9TZXsZItgdw">
                 <picture>
                   <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/content/video-mobile.jpg    1x,
+                    img/content/video-mobile@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    img/content/video-mobile.webp    1x,
+                    img/content/video-mobile@2x.webp 2x
+                  "
+                />
+                  <source
                     type="image/webp"
                     srcset="
                       img/content/video.webp    1x,
@@ -211,6 +235,7 @@
               <button data-tab="2" type="button" aria-label="6 месяцев">
                 6 месяцев
               </button>
+
               <button data-tab="3" type="button" aria-label="12 месяцев">
                 12 месяцев
               </button>
@@ -633,7 +658,7 @@
               <div class="benefits__info-text">
                 <p>Собственная парковка</p>
                 <span
-                  >Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей
+                  >Вы&nbsp;всегда найдете место для своей&nbsp;машины&nbsp;на&nbsp;нашей
                   парковке</span
                 >
               </div>
@@ -690,12 +715,26 @@
                     <source
                       media="(max-width: 768px)"
                       srcset="
+                        img/content/sales-mobile.jpg    1x,
+                        img/content/sales-mobile@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 768px)"
+                      srcset="
+                        img/content/sales-mobile.webp    1x,
+                        img/content/sales-mobile@2x.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 1199px)"
+                      srcset="
                         img/content/sales-tablet.jpg    1x,
                         img/content/sales-tablet@2x.jpg 2x
                       "
                     />
                     <source
-                      media="(max-width: 768px)"
+                      media="(max-width: 1199px)"
                       srcset="
                         img/content/sales-tablet.webp    1x,
                         img/content/sales-tablet@2x.webp 2x
@@ -742,13 +781,13 @@
           <h2>Вопросы и ответы</h2>
           <div class="faq__wrapper container">
             <div class="faq__category">
-              <button data-acc-tab="1" type="button" class="faq__btn btn">
+              <button data-acc-tab="1" type="button" class="faq__btn btn is-active">
                 Центр
               </button>
               <button
                 data-acc-tab="2"
                 type="button"
-                class="faq__btn btn is-active"
+                class="faq__btn btn"
               >
                 Абонемент
               </button>
@@ -1052,26 +1091,28 @@
             <form class="form__content">
               <h3>Бесплатное занятие</h3>
               <fieldset class="form__fields">
-                <label for="name">
+                <label class="form__label" for="name">
                   <span class="visually-hidden">Имя</span>
                   <input
                     type="text"
                     id="name"
-                    pattern="^[A-Za-zА-Яа-яЁё\- ]+$"
                     placeholder="Имя"
+                    data-pristine-required-message="Пожалуйста введите свое имя"
                     required
                   />
+
                 </label>
-                <label for="phone">
+                <label class="form__label" for="phone">
                   <span class="visually-hidden">Телефон</span>
                   <input
                     type="tel"
                     id="phone"
-                    pattern="^\+?[\d ()-]+$"
                     placeholder="Телефон"
-                    data-focus-visible-added
+                    data-phone-pattern
+                    data-pristine-required-message="Пожалуйста введите свой телефон"
                     required
                   />
+
                 </label>
               </fieldset>
               <button class="form__button btn" type="submit">отправить</button>
@@ -1098,7 +1139,17 @@
       </main>
       <footer class="footer">
         <div class="footer__wrapper container">
-          <a class="footer__logo logo" aria-hidden="true"> SUPERGYM </a>
+          <a class="footer__logo logo" aria-hidden="true">
+            <span class="visually-hidden">На&nbsp;главную</span>
+            <svg
+              width="122"
+              height="44"
+              focusable="false"
+              aria-hidden="true"
+            >
+              <use xlink:href="img/icons/sprite.svg#logo"></use>
+            </svg>
+          </a>
           <nav class="footer__links">
             <ul class="footer__links-list">
               <li><a href="#">Услуги</a></li>

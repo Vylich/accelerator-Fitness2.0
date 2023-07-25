@@ -39,7 +39,7 @@
   display: grid;
   grid-template-columns: 1fr 240px 1fr;
   grid-auto-flow: dense;
-  gap: 130px 60px;
+  gap: 54px 60px;
 
   @include vp-1199 {
     max-width: 768px;
@@ -76,6 +76,25 @@
     margin-bottom: 0;
     padding: 0 46px 20px;
     text-align: center;
+  }
+
+  &--right:nth-child(even),
+  &--left:first-child {
+    padding-bottom: 74px;
+    border-bottom: 1px solid $color-crimson;
+
+    @include vp-1199 {
+      border: none;
+      padding: 0;
+    }
+
+
+  }
+
+  &--left:first-child {
+    @include vp-767 {
+      padding: 0 67px 20px;
+    }
   }
 
   &--left {
@@ -166,37 +185,12 @@
   background-color: $color-resolution-blue;
   color: $color-default-white;
 
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    width: 340px;
-    height: 2px;
-    background-color: $color-crimson;
-    opacity: 0.2;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  &::before {
-    right: 129px;
-  }
-
-  &::after {
-    left: 471px;
-  }
-
   @include vp-1199 {
     max-width: 442px;
     margin: 22px auto 27px;
     padding: 45px 135px 40px;
     grid-column: 1/-1;
     grid-row: 2;
-
-    &::before,
-    &::after {
-      display: none;
-    }
   }
 
   @include vp-767 {

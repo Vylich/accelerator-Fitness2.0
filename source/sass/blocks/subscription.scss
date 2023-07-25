@@ -171,7 +171,7 @@
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.05em;
-    border: 2px solid $color-sapphire;
+    border: 2px solid $color-border-light-grey;
     width: 206px;
     cursor: pointer;
     color: $color-sapphire;
@@ -179,7 +179,8 @@
     transition: border, background, color $trans-default;
 
     @include focus {
-      outline-color: $color-sapphire;
+      border-color: $color-sapphire;
+      outline: none;
     }
   }
 }

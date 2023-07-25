@@ -4,9 +4,9 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   max-width: 130px;
-  margin-right: -4px;
+  margin-right: 1px;
   gap: 11px;
 
   @include vp-1199 {

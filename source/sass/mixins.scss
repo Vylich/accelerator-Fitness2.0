@@ -54,9 +54,9 @@
 @mixin gradient-text {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(
-    127.61deg,
+    143deg,
     $color-crimson 0%,
-    $color-cobalt 87.33%
+    $color-cobalt 100%
   );
   background-clip: text;
 }

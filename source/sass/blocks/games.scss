@@ -46,25 +46,25 @@
     padding: 48px 37px 51px 41px;
     width: 100%;
   }
+}
 
-  .games__link {
+.games__link {
+  width: 100%;
+  border: 4px solid $color-default-white;
+  padding: 25px 40px;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+
+  @include vp-1199 {
     width: 100%;
-    border: 4px solid $color-default-white;
-    padding: 25px 40px;
-    font-size: 12px;
-    line-height: 14px;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-align: center;
-
-    @include vp-1199 {
-      width: 100%;
-      border-width: 2px;
-      padding: 12px 50px;
-      font-size: 10px;
-      line-height: 12px;
-    }
+    border-width: 2px;
+    padding: 12px 45px;
+    font-size: 10px;
+    line-height: 12px;
   }
 }
 
@@ -195,6 +195,17 @@
 .games__picture {
   margin: 0;
   background-color: $color-sapphire;
+  height: 100%;
+  overflow: hidden;
+  
+  img {
+    object-fit: cover;
+    height: 500px;
+
+    @include vp-1199 {
+      height: 292px;
+    }
+  }
 }
 
 .games__time-content {

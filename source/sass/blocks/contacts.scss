@@ -78,6 +78,7 @@
     font-size: 14px;
     line-height: 21px;
     margin-bottom: 16px;
+    align-items: flex-start;
 
     @include vp-1199 {
       font-size: 18px;

@@ -6,7 +6,7 @@ const headers = document.querySelectorAll('.accordion__header');
 const showAccordion = () => {
 
   lists.forEach((list, i) => {
-    if (i === 1) {
+    if (i === 0) {
       list.classList.add('is-active');
     }
   });

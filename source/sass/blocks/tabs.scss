@@ -1,6 +1,4 @@
 .tabs__buttons {
-  width: 100%;
-  max-width: 341px;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -11,7 +9,6 @@
   white-space: nowrap;
 
   @include vp-1199 {
-    max-width: 333px;
     column-gap: 55px;
     margin-bottom: 14px;
   }
@@ -46,6 +43,24 @@
 
     @include hover-focus {
       opacity: 1;
+    }
+
+    @include focus {
+      outline: none;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: $color-crimson;
+        left: 0;
+        bottom: -12px;
+
+        @include vp-767 {
+          bottom: -14px;
+        }
+      }
     }
   }
 

@@ -54,6 +54,7 @@
   gap: 0 28px;
   margin-bottom: 27px;
   border: none;
+  padding: 0;
 
   @include vp-1199 {
     gap: 0 60px;
@@ -113,4 +114,24 @@
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+}
+
+.form__error {
+  color: $color-torch-red;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  display: none;
+  padding-top: 2px;
+}
+
+
+.is-invalid {
+  input {
+    border-bottom: 1px solid $color-torch-red;
+
+    +.form__error {
+      display: block;
+    }
+  }
 }

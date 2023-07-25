@@ -3,9 +3,11 @@ import {checkReviewsSwiper, checkCoachSwiper} from './modules/slider.js';
 import {showContent} from './modules/tabs';
 import {showAccordion, showContentAccordion} from './modules/accordion';
 import {findVideos} from './modules/video';
-import {Form} from './modules/form-validate/form';
+import {onEventCalllback} from './modules/phone-mask.js';
+import { formValidate } from './modules/form';
 
 document.querySelector('html').classList.remove('no-js');
+const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
 
 // ---------------------------------
 
@@ -14,20 +16,26 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
   iosVhFix();
+
+  if (phoneInputs) {
+    for (let elem of phoneInputs) {
+      for (let ev of ['input', 'blur', 'focus']) {
+        elem.addEventListener(ev, onEventCalllback);
+      }
+    }
+  }
   // Modules
   // ---------------------------------
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    const form = new Form();
-    window.form = form;
-    form.init();
     checkReviewsSwiper();
     checkCoachSwiper();
     showContent();
     showAccordion();
     showContentAccordion();
     findVideos();
+    formValidate();
   });
 });
 

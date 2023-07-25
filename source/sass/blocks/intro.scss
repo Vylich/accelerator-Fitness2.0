@@ -7,8 +7,12 @@
     justify-content: space-between;
   }
 
+  @include vp-767 {
+    justify-content: center;
+  }
+
   img {
-    margin-top: -22px;
+    margin-top: -30px;
 
     @include vp-1199 {
       margin-top: -9px;
@@ -23,19 +27,19 @@
 .intro__about {
   display: flex;
   flex-direction: column;
-  padding-top: 87px;
+  padding-top: 80px;
 
   align-items: flex-end;
   color: $color-default-white;
   font-family: $ff-alumni;
 
   @include vp-1199 {
-    padding-top: 33px;
+    padding-top: 35px;
   }
 
   @include vp-767 {
-    width: 100%;
-    padding-top: 45px;
+    max-width: 320px;
+    padding-top: 39px;
   }
 
   p {
@@ -47,6 +51,7 @@
     @include vp-1199 {
       font-size: 34px;
       margin: 0;
+      line-height: 55px;
       margin-right: 8px;
     }
 
@@ -80,6 +85,7 @@
   @include vp-1199 {
     margin-top: 36px;
     width: 185px;
+    padding: 20px 28px;
   }
 
   @include vp-767 {
@@ -96,13 +102,12 @@
 
 
   @include vp-1199 {
-
     gap: 0;
-    align-content: space-between;
   }
 
   @include vp-767 {
     position: relative;
+    justify-content: center;
   }
 
   h1 {
@@ -126,8 +131,8 @@
 
     @include vp-767 {
       margin-bottom: 22px;
-      width: 200px;
-      margin-left: auto;
+      margin-left: -9px;
+      flex-grow: 0;
     }
   }
 
@@ -145,9 +150,10 @@
     }
 
     @include vp-767 {
-      position: absolute;
+      position: relative;
       left: 0;
-      top: 11px;
+      top: -21px;
+      flex-shrink: 0;
     }
   }
 
