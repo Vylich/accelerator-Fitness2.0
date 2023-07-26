@@ -2253,6 +2253,10 @@ button,
   text-align: center;
 }
 
+.games__link.focus-visible:active {
+  color: #102654;
+}
+
 .games__text {
   margin: 11px 0 46px;
   margin-bottom: 46px;

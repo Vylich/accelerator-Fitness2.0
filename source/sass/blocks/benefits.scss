@@ -87,8 +87,6 @@
       border: none;
       padding: 0;
     }
-
-
   }
 
   &--left:first-child {
@@ -139,7 +137,7 @@
       background: $text-gradient-first;
       background-clip: text;
     }
-    
+
     @include vp-1199 {
       font-size: 58px;
       margin-bottom: -20px;

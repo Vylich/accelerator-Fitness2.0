@@ -67,6 +67,10 @@
     line-height: 12px;
   }
 
+  @include active {
+    color: $color-sapphire;
+  }
+
   @include vp-767 {
     width: 97%;
   }

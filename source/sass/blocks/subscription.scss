@@ -26,8 +26,6 @@
     background-size: contain;
     background-repeat: no-repeat;
 
-
-
     @include background-image("barbell", "png");
 
     @include vp-1199 {

@@ -4,7 +4,7 @@ import {showContent} from './modules/tabs';
 import {showAccordion, showContentAccordion} from './modules/accordion';
 import {findVideos} from './modules/video';
 import {onEventCalllback} from './modules/phone-mask.js';
-import { formValidate } from './modules/form';
+import {formValidate} from './modules/form';
 
 document.querySelector('html').classList.remove('no-js');
 const phoneInputs = document.querySelectorAll('[data-phone-pattern]');

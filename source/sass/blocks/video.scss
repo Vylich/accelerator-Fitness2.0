@@ -35,7 +35,6 @@
   @include vp-767 {
     margin-top: 39px;
     transform: translate(0);
-    height: 167px;
     position: static;
     width: 100%;
     height: auto;
@@ -98,7 +97,6 @@
     outline: none;
     border: none;
     background-image: url("../img/icons/video-button-hover.svg");
-
   }
 
   @include vp-1199 {
