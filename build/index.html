@@ -39,14 +39,9 @@
       <div class="general">
         <header class="header">
           <div class="header__wrapper container">
-            <a class="header__logo logo" aria-hidden="true">
+            <a href="#" class="header__logo logo" aria-hidden="true">
               <span class="visually-hidden">На&nbsp;главную</span>
-              <svg
-                width="122"
-                height="44"
-                focusable="false"
-                aria-hidden="true"
-              >
+              <svg width="122" height="44" focusable="false" aria-hidden="true">
                 <use xlink:href="img/icons/sprite.svg#logo"></use>
               </svg>
             </a>
@@ -58,14 +53,16 @@
         <section class="intro">
           <div class="intro__wrapper container">
             <div class="intro__about">
-              <p>омск</p>
-              <div class="intro__about-inner">
-                <ul>
-                  <li>Тренажёрный зал</li>
-                  <li>Групповые занятия</li>
-                  <li>Кардио-зона</li>
-                </ul>
-                <h1>Фитнес<br />центр</h1>
+              <div class="intro__about-wrapper">
+                <p>омск</p>
+                <div class="intro__about-inner">
+                  <ul>
+                    <li>Тренажёрный зал</li>
+                    <li>Групповые занятия</li>
+                    <li>Кардио-зона</li>
+                  </ul>
+                  <h1>Фитнес<br />центр</h1>
+                </div>
               </div>
               <a class="intro__about-button btn" href="#tickets"
                 ><span>купить абонемент</span></a
@@ -180,19 +177,19 @@
               <a data-video-link href="https://youtu.be/9TZXsZItgdw">
                 <picture>
                   <source
-                  media="(max-width: 767px)"
-                  srcset="
-                    img/content/video-mobile.jpg    1x,
-                    img/content/video-mobile@2x.jpg 2x
-                  "
-                />
-                <source
-                  media="(max-width: 767px)"
-                  srcset="
-                    img/content/video-mobile.webp    1x,
-                    img/content/video-mobile@2x.webp 2x
-                  "
-                />
+                    media="(max-width: 767px)"
+                    srcset="
+                      img/content/video-mobile.jpg    1x,
+                      img/content/video-mobile@2x.jpg 2x
+                    "
+                  />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      img/content/video-mobile.webp    1x,
+                      img/content/video-mobile@2x.webp 2x
+                    "
+                  />
                   <source
                     type="image/webp"
                     srcset="
@@ -235,7 +232,6 @@
               <button data-tab="2" type="button" aria-label="6 месяцев">
                 6 месяцев
               </button>
-
               <button data-tab="3" type="button" aria-label="12 месяцев">
                 12 месяцев
               </button>
@@ -640,7 +636,7 @@
               class="benefits__info-container benefits__info-container--left"
             >
               <div class="benefits__info-number">
-                <p>900</p>
+                <p class="is-first">900</p>
                 <span>кв/м</span>
               </div>
               <div class="benefits__info-text">
@@ -658,8 +654,8 @@
               <div class="benefits__info-text">
                 <p>Собственная парковка</p>
                 <span
-                  >Вы&nbsp;всегда найдете место для своей&nbsp;машины&nbsp;на&nbsp;нашей
-                  парковке</span
+                  >Вы&nbsp;всегда найдете место для
+                  своей&nbsp;машины&nbsp;на&nbsp;нашей парковке</span
                 >
               </div>
             </div>
@@ -781,14 +777,14 @@
           <h2>Вопросы и ответы</h2>
           <div class="faq__wrapper container">
             <div class="faq__category">
-              <button data-acc-tab="1" type="button" class="faq__btn btn is-active">
+              <button
+                data-acc-tab="1"
+                type="button"
+                class="faq__btn btn is-active"
+              >
                 Центр
               </button>
-              <button
-                data-acc-tab="2"
-                type="button"
-                class="faq__btn btn"
-              >
+              <button data-acc-tab="2" type="button" class="faq__btn btn">
                 Абонемент
               </button>
               <button data-acc-tab="3" type="button" class="faq__btn btn">
@@ -801,13 +797,13 @@
             <div data-acc-list="1" class="faq__accordion accordion">
               <div class="accordion__container">
                 <div class="accordion__item">
-                  <div data-header="header-1" class="accordion__header" >
+                  <div data-header="header-1" class="accordion__header">
                     Как стать членом фитнес-центра?
                   </div>
                   <div id="header-1" class="accordion__content">
                     При первом посещении и&nbsp;покупке абонемента, необходимо
                     заполнить анкету и&nbsp;подписать договор. При покупке
-                    абонемента онлайн, анкета также заполняется онлайн
+                    абонемента онлайн, анкета также&nbsp;заполняется онлайн
                     и&nbsp;договор придет вам на&nbsp;почту.
                   </div>
                 </div>
@@ -875,8 +871,8 @@
                 </div>
                 <div class="accordion__item">
                   <div data-header="header-7" class="accordion__header">
-                    Есть&nbsp;ли лимит по&nbsp;посещениям тренажерного зала и&nbsp;групповых
-занятий?
+                    Есть&nbsp;ли лимит по&nbsp;посещениям тренажерного зала
+                    и&nbsp;групповых занятий?
                   </div>
                   <div id="header-7" class="accordion__content">
                     При посещении тренажерного зала вам необходимо оплатить
@@ -968,7 +964,8 @@
                 </div>
                 <div class="accordion__item">
                   <div data-header="header-14" class="accordion__header">
-                    Можно&nbsp;ли приводить с&nbsp;собой детей на&nbsp;тренировки?
+                    Можно&nbsp;ли приводить с&nbsp;собой детей
+                    на&nbsp;тренировки?
                   </div>
                   <div id="header-14" class="accordion__content">
                     При первом посещении и&nbsp;покупке абонемента, необходимо
@@ -1100,7 +1097,6 @@
                     data-pristine-required-message="Пожалуйста введите свое имя"
                     required
                   />
-
                 </label>
                 <label class="form__label" for="phone">
                   <span class="visually-hidden">Телефон</span>
@@ -1112,7 +1108,6 @@
                     data-pristine-required-message="Пожалуйста введите свой телефон"
                     required
                   />
-
                 </label>
               </fieldset>
               <button class="form__button btn" type="submit">отправить</button>
@@ -1139,24 +1134,19 @@
       </main>
       <footer class="footer">
         <div class="footer__wrapper container">
-          <a class="footer__logo logo" aria-hidden="true">
+          <a href="#" class="footer__logo logo" aria-hidden="true">
             <span class="visually-hidden">На&nbsp;главную</span>
-            <svg
-              width="122"
-              height="44"
-              focusable="false"
-              aria-hidden="true"
-            >
+            <svg width="122" height="44" focusable="false" aria-hidden="true">
               <use xlink:href="img/icons/sprite.svg#logo"></use>
             </svg>
           </a>
           <nav class="footer__links">
             <ul class="footer__links-list">
-              <li><a href="#">Услуги</a></li>
-              <li><a href="#">Абонементы</a></li>
-              <li><a href="#">Акции</a></li>
-              <li><a href="#">Тренеры</a></li>
-              <li><a href="#">Расписание</a></li>
+              <li><a href="#"><span>Услуги</span></a></li>
+              <li><a href="#"><span>Абонементы</span></a></li>
+              <li><a href="#"><span>Акции</span></a></li>
+              <li><a href="#"><span>Тренеры</span></a></li>
+              <li><a href="#"><span>Расписание</span></a></li>
             </ul>
           </nav>
           <ul class="social">
@@ -1168,7 +1158,7 @@
                   focusable="false"
                   aria-hidden="true"
                   aria-label="вконтакте"
-                  class="social__icon social__icon--vk"
+                  class="social__icon"
                 >
                   <use xlink:href="img/icons/sprite.svg#icon-vk"></use>
                 </svg>
@@ -1182,12 +1172,13 @@
                   focusable="false"
                   aria-hidden="true"
                   aria-label="одноклассники"
-                  class="social__icon social__icon--ok"
+                  class="social__icon"
                 >
                   <use xlink:href="img/icons/sprite.svg#icon-ok"></use>
                 </svg>
               </a>
             </li>
+
             <li class="social__item">
               <a class="social__link" href="#" aria-hidden="true">
                 <svg
@@ -1196,7 +1187,7 @@
                   focusable="false"
                   aria-hidden="true"
                   aria-label="реддит"
-                  class="social__icon social__icon--rt"
+                  class="social__icon"
                 >
                   <use xlink:href="img/icons/sprite.svg#icon-reddit"></use>
                 </svg>

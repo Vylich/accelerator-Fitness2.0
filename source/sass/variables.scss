@@ -37,19 +37,19 @@ $black-to-right: linear-gradient(
 );
 
 $general-gradient: conic-gradient(
-  from 151deg at 16.03% 39.06%,
+  from 141deg at 16.03% 39.06%,
   #b80027 -46.69deg,
-  #003d85 32.24deg,
-  #b80027 313.31deg,
-  #003d85 392.24deg
+  #003d85 20.24deg,
+  #b80027 305.31deg,
+  #003d85 385.24deg
 );
 
 $general-gradient-tablet: conic-gradient(
-  from 167deg at 35.31% 34.22%,
+  from 155deg at 20.70% 35.74%,
   #b80027 -46.69deg,
-  #003d85 32.24deg,
-  #b80027 313.31deg,
-  #003d85 392.24deg
+  #003d85 20.24deg,
+  #b80027 290.31deg,
+  #003d85 385.24deg
 );
 
 $general-gradient-mobile: conic-gradient(
@@ -62,6 +62,9 @@ $general-gradient-mobile: conic-gradient(
 
 $border-gradient: linear-gradient(142.51deg, #d10a42 0, #0041ca 87.33%) 1;
 $button-gradient: linear-gradient(98.05deg, #ed0233 17.6%, #003eb7 95.31%);
+$text-gradient-first: linear-gradient(145.61deg, #d10a42 15%, #0041ca 46.58%);
+$text-gradient: linear-gradient(163deg, #D10A42 15%, #0041CA 75%);
+
 
 // Typography
 // ---------------------------------

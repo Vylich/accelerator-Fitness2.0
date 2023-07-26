@@ -4,9 +4,11 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
-  max-width: 130px;
+  flex-wrap: wrap;
+  min-width: 100px;
+  max-width: 100px;
   margin-right: 1px;
+  margin-left: 10px;
   gap: 11px;
 
   @include vp-1199 {
@@ -24,8 +26,22 @@
   vertical-align: middle;
   width: 25px;
   height: 25px;
-  user-select: none;
+
+  @include hover-focus {
+    svg {
+      color: $color-default-white;
+      background-color: $color-egyptian-blue;
+    }
+  }
+
+  @include active {
+    svg {
+      color: $color-default-white;
+      background-color: $color-sapphire;
+    }
+  }
 }
+
 
 .social__icon {
   background-color: $color-default-white;
@@ -35,26 +51,4 @@
   height: 100%;
   color: $color-black-russian;
   transition: background, color $trans-default;
-
-  &--vk {
-    @include hover-focus {
-      background-color: #103aae;
-    }
-  }
-
-  &--ok {
-    @include hover-focus {
-      background-color: #ed812b;
-    }
-  }
-
-  &--rt {
-    @include hover-focus {
-      background-color: #ff4500;
-    }
-  }
-
-  @include hover-focus {
-    color: $color-default-white;
-  }
 }

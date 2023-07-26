@@ -43,7 +43,6 @@
 .faq__wrapper {
   display: flex;
 
-
   @include vp-1199 {
     flex-direction: column;
     align-items: center;
@@ -71,6 +70,12 @@
     border: 1px solid $color-default-white;
     background: $button-gradient;
     color: $color-default-white;
+
+    @include hover-focus {
+      border: 1px solid $color-default-white;
+      background: $button-gradient;
+      color: $color-default-white;
+    }
   }
 }
 
@@ -97,12 +102,11 @@
   }
 
   @include hover-focus {
-    border: 1px solid $color-default-white;
-    background: $button-gradient;
-    color: $color-default-white;
+    border: 1px solid $color-sapphire;
+    background-color: transparent;
+    color: $color-sapphire;
   }
 }
-
 
 .faq__accordion {
   display: none;
@@ -113,7 +117,6 @@
 .faq__accordion.is-active {
   display: block;
 }
-
 
 @keyframes tab_fade {
   100% {

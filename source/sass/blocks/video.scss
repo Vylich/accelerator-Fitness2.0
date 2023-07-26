@@ -10,12 +10,16 @@
 
   @include hover-focus {
     .video__button {
+      outline: none;
+      border: none;
       background-image: url("../img/icons/video-button-hover.svg");
     }
   }
 
   @include active {
     .video__button {
+      outline: none;
+      border: none;
       background-image: url("../img/icons/video-button-active.svg");
     }
   }
@@ -85,10 +89,14 @@
   cursor: pointer;
 
   @include active {
+    outline: none;
+    border: none;
     background-image: url("../img/icons/video-button-active.svg");
   }
 
   @include focus {
+    outline: none;
+    border: none;
     background-image: url("../img/icons/video-button-hover.svg");
 
   }

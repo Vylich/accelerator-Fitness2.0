@@ -22,6 +22,7 @@ const showAccordion = () => {
 
         if (button.dataset.accTab === list.dataset.accList) {
           button.classList.add('is-active');
+          button.blur();
           list.classList.add('is-active');
           list.style.display = 'block';
         }

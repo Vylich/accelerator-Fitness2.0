@@ -27,11 +27,13 @@
   }
 
   @include hover-focus {
+    outline: none;
     background-color: $color-default-white;
     color: $color-egyptian-blue;
   }
 
   @include focus {
+    outline: none;
     background-color: $color-default-white;
     color: $color-egyptian-blue;
   }

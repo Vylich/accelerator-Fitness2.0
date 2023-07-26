@@ -13,8 +13,7 @@
 
   a {
     @include hover-focus {
-      opacity: 0.8;
-      outline-color: $color-default-white;
+      outline: none;
     }
   }
 
@@ -26,7 +25,7 @@
 
   @include vp-767 {
     position: relative;
-    padding: 45px 15px 46px;
+    padding: 45px 15px 46px 5px;
     flex-wrap: wrap;
     justify-content: start;
     gap: 0;
@@ -69,22 +68,22 @@
 
 .footer__links-list {
   list-style: none;
-  margin: 0 0 0 5px;
+  margin: -3px 0 0 24px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 40px;
+  gap: 10px 20px;
 
   @include vp-1199 {
-    margin: 0 0 0 18px;
-    gap: 10px 30px;
+    margin: 0 0 0 28px;
+    gap: 10px 8px;
   }
 
   @include vp-767 {
     display: block;
     column-count: 2;
     margin: 0;
+    gap: 10px 17px;
   }
 
   li {
@@ -102,13 +101,23 @@
     font-size: 14px;
     line-height: 16px;
     transition: border $trans-default;
+    border: 1px solid transparent ;
+    padding: 5px 0;
+    position: relative;
+    padding: 5px 10px;
 
     @include vp-767 {
       font-size: 16px;
     }
 
-    @include hover-focus {
-      border-bottom: 1px $color-default-white solid;
+    @include hover {
+      span {
+        border-bottom: 1px solid $color-default-white;
+      }
+    }
+
+    @include focus {
+      border: 1px solid $color-default-white;
     }
 
     &:disabled {

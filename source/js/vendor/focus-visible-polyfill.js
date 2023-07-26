@@ -68,6 +68,11 @@ function applyFocusVisiblePolyfill(scope) {
       return true;
     }
 
+    if (tagName === 'A' && !el.readOnly) {
+      return true;
+    }
+
+
     if (el.isContentEditable) {
       return true;
     }
