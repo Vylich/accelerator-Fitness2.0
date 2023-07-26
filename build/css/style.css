@@ -1809,7 +1809,6 @@ button,
   -webkit-transition: border 0.3s ease;
   transition: border 0.3s ease;
   border: 1px solid transparent;
-  padding: 5px 0;
   position: relative;
   padding: 5px 10px;
 }
@@ -3205,7 +3204,7 @@ button,
 }
 
 .benefits__info-number p {
-  background: linear-gradient(163deg, #D10A42 15%, #0041CA 75%);
+  background: linear-gradient(163deg, #d10a42 15%, #0041ca 75%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3702,7 +3701,7 @@ button,
 
   .general {
     min-height: 554px;
-    background: conic-gradient(from 155deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 20.24deg, #b80027 290.31deg, #003d85 385.24deg);
+    background: conic-gradient(from 155deg at 20.7% 35.74%, #b80027 -46.7deg, #003d85 20.24deg, #b80027 290.31deg, #003d85 385.24deg);
     margin-bottom: 100px;
   }
 
@@ -4532,7 +4531,6 @@ button,
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
-    height: 167px;
     position: static;
     width: 100%;
     height: auto;
