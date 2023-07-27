@@ -13,7 +13,6 @@ const showAccordion = () => {
 
   buttons.forEach((button) => {
     button.addEventListener('click', ()=> {
-
       buttons.forEach((item) => item.classList.remove('is-active'));
 
       lists.forEach((list) => {
@@ -22,7 +21,7 @@ const showAccordion = () => {
 
         if (button.dataset.accTab === list.dataset.accList) {
           button.classList.add('is-active');
-          button.blur();
+
           list.classList.add('is-active');
           list.style.display = 'block';
         }
@@ -35,8 +34,8 @@ const showContentAccordion = () => {
   headers.forEach((header) => {
     header.insertAdjacentHTML('beforeEnd', '<button></button>');
     header.addEventListener('click', () => {
+      header.blur();
       const activeContent = document.querySelector('#' + header.dataset.header);
-
       if (activeContent.classList.contains('active')) {
         activeContent.classList.remove('active');
         header.classList.remove('active');

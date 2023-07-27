@@ -102,8 +102,11 @@
     line-height: 16px;
     transition: border $trans-default;
     border: 1px solid transparent;
-    position: relative;
     padding: 5px 10px;
+
+    span {
+      padding-bottom: 5px;
+    }
 
     @include vp-767 {
       font-size: 16px;
@@ -117,6 +120,13 @@
 
     @include focus {
       border: 1px solid $color-default-white;
+    }
+
+    @include active {
+      span {
+        border-bottom: 1px solid transparent;
+      }
+      border: 1px solid transparent;
     }
 
     &:disabled {

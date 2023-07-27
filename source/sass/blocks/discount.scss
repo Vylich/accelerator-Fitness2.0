@@ -66,6 +66,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
   max-width: 280px;
   min-height: 462px;
   padding: 43px 45px 44px;
@@ -100,64 +101,56 @@
   }
 
   a {
-    position: relative;
-    font-size: 14px;
-    margin: auto auto 0 0;
+    position: absolute;
     text-transform: uppercase;
     color: $color-default-white;
     letter-spacing: 0.05em;
     line-height: 17px;
+    padding: 5px 5px 4px 5px;
+    border: 1px solid transparent;
+    left: 39px;
+    bottom: 40px;
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      border-bottom: 1px solid $color-default-white;
+    }
 
     &.disabled {
       opacity: 0.5;
       pointer-events: none;
     }
 
-    @include active {
-      opacity: 1;
-      border-bottom: 1px solid $color-default-white;
-
-      &::after {
-        display: none;
-      }
-    }
 
     @include hover {
       opacity: 0.8;
       transition: $trans-default;
     }
 
+
     @include focus {
       outline: none;
 
-      &::after {
-        content: "";
-        position: absolute;
-        border: 1px solid $color-default-white;
-        width: 99px;
-        height: 30px;
-        top: -7px;
-        left: -10px;
+      span {
+        border-bottom: 1px solid transparent;
       }
+      border: 1px solid $color-default-white;
+    }
 
-      &::before {
-        display: none;
+    @include active {
+      opacity: 1;
+      border: 1px solid transparent;
+
+      span {
+        border-bottom: 1px solid $color-default-white;
       }
     }
 
     @include vp-767 {
-      margin-right: 0;
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      background-color: $color-default-white;
-      height: 1px;
-      width: 100%;
-      left: 0;
-      bottom: -1px;
-      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
@@ -199,7 +192,8 @@
   width: 100%;
   border: 7px solid;
   border-image: $border-gradient;
-  padding: 23px 28px 31px;
+  padding: 25px 28px 31px;
+  position: relative;
 
   @include vp-1199 {
     max-width: 324px;
@@ -234,50 +228,23 @@
   }
 
   a {
-    position: relative;
+    position: absolute;
     color: $color-sapphire;
     font-weight: 700;
     text-transform: uppercase;
-    margin: auto auto 0 0;
     letter-spacing: 0.05em;
     font-size: 12px;
     line-height: 14px;
+    border: 1px solid transparent;
+    padding: 5px;
+    bottom: 23px;
+    left: 22px;
 
-    @include active {
-      opacity: 1;
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      margin: 0;
       border-bottom: 1px solid $color-sapphire;
-
-      &::after {
-        display: none;
-      }
-    }
-
-    @include hover-focus {
-      opacity: 0.8;
-      transition: $trans-default;
-    }
-
-    @include focus {
-      outline: none;
-      opacity: 1;
-
-      &::after {
-        content: "";
-        position: absolute;
-        border: 1px solid $color-sapphire;
-        width: 85px;
-        height: 25px;
-        top: -5px;
-        left: -9px;
-      }
-
-      &::before {
-        display: none;
-      }
-    }
-
-    @include vp-767 {
-      margin: auto;
     }
 
     &.disabled {
@@ -285,19 +252,35 @@
       pointer-events: none;
     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      background-color: $color-resolution-blue;
-      height: 1px;
-      width: 100%;
-      left: 0;
-      bottom: -1px;
-      right: 0;
 
-      @include vp-1199 {
-        bottom: -2px;
+    @include hover {
+      opacity: 0.8;
+      transition: $trans-default;
+    }
+
+
+    @include focus {
+      outline: none;
+
+      span {
+        border-bottom: 1px solid transparent;
       }
+      border: 1px solid $color-sapphire;
+    }
+
+    @include active {
+      opacity: 1;
+      border: 1px solid transparent;
+
+      span {
+        border-bottom: 1px solid $color-sapphire;
+      }
+    }
+
+    @include vp-767 {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 34px;
     }
   }
 }

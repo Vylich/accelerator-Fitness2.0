@@ -5,6 +5,8 @@ import {showAccordion, showContentAccordion} from './modules/accordion';
 import {findVideos} from './modules/video';
 import {onEventCalllback} from './modules/phone-mask.js';
 import {formValidate} from './modules/form';
+import {resetFocus} from './utils/reset-focus';
+
 
 document.querySelector('html').classList.remove('no-js');
 const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
@@ -36,6 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
     showContentAccordion();
     findVideos();
     formValidate();
+    resetFocus();
   });
 });
 

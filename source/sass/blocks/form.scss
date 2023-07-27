@@ -123,6 +123,10 @@
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+
+  @include active {
+    color: $color-sapphire;
+  }
 }
 
 .form__error {
