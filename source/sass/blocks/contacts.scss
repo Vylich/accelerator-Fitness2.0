@@ -99,6 +99,7 @@
     height: 101px;
     top: 7px;
     right: -32px;
+    background-color: $color-sapphire;
 
     @include vp-1199 {
       top: 8px;
