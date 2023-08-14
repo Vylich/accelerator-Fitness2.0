@@ -50,36 +50,36 @@
   }
 }
 
-@mixin background-image($filename, $ext: "jpg") {
-  @supports (background-image: url("../img/content/#{$filename}.webp")) {
-    background-image: url("../img/content/#{$filename}.webp");
+@mixin background-image($filename, $folder, $ext: "jpg") {
+  @supports (background-image: url("../img/#{$folder}/#{$filename}.webp")) {
+    background-image: url("../img/#{$folder}/#{$filename}.webp");
 
     @include vp-1199 {
-      background-image: url("../img/content/#{$filename}-tablet.webp");
+      background-image: url("../img/#{$folder}/#{$filename}-tablet.webp");
     }
 
     @include vp-767 {
-      background-image: url("../img/content/#{$filename}-mobile.webp");
+      background-image: url("../img/#{$folder}/#{$filename}-mobile.webp");
     }
 
     @include retina {
-      background-image: url("../img/content/#{$filename}@2x.webp");
+      background-image: url("../img/#{$folder}/#{$filename}@2x.webp");
 
       @include vp-1199 {
-        background-image: url("../img/content/#{$filename}-tablet@2x.webp");
+        background-image: url("../img/#{$folder}/#{$filename}-tablet@2x.webp");
       }
 
       @include vp-767 {
-        background-image: url("../img/content/#{$filename}-mobile@2x.webp");
+        background-image: url("../img/#{$folder}/#{$filename}-mobile@2x.webp");
       }
     }
   }
 
-  @supports not (background-image: url("../img/content/#{$filename}.webp")) {
-    background-image: url("../img/content/#{$filename}.#{$ext}");
+  @supports not (background-image: url("../img/#{$folder}/#{$filename}.webp")) {
+    background-image: url("../img/#{$folder}/#{$filename}.#{$ext}");
 
     @include retina {
-      background-image: url("../img/content/#{$filename}@2x.#{$ext}");
+      background-image: url("../img/#{$folder}/#{$filename}@2x.#{$ext}");
     }
   }
 }
